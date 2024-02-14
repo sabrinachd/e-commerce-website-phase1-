@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compte -sabrina store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/bbf7733d5d.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Ubuntu:wght@500&display=swap");
+    </style>
+  </head>
+  <body>
+    <!--*******************************navmenu*************************************************-->
+    <div class="header">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"> <img src="img/logo1.png" width="200px" /></a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html"><i class="fa-solid fa-house"></i> Accueil </a>
+          </li>
+          <li>
+            <a href="produits.html">
+              <i class="fa-solid fa-list"></i> Produits</a
+            >
+          </li>
+          <li>
+            <a href="#"> <i class="fa-regular fa-calendar"></i> Contact</a>
+          </li>
+          <li>
+            <a href="compte.html"
+              ><i class="fa-solid fa-bag-shopping"></i> Compte
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- -----------------------------compte ---------------------------------->
+    <div class="account-page">
+      <div class="container">
+        <div class="account">
+          <div class="col-4">
+            <img src="img/pic1.PNG" width="250px" />
+          </div>
+          <div class="col-4">
+            <div class="form-container">
+              <div class="form-btn">
+                <span onclick="connexion()">Connexion </span>
+                <span onclick="compte ()"> Créer Compte </span>
+                <hr id="indicator" />
+              </div>
+              <form action="" id="LoginForm">
+                <input type="text" placeholder="Nom et prénom" />
+                <input type="password" placeholder="mot de passe " />
+
+                <button type="submit" class="btn1">Se connecter</button> <br />
+                <br />
+                <a href="">mot de passe oublié </a>
+              </form>
+              <form action="" id="RegForm">
+                <input type="text" placeholder="Nom et prénom " />
+                <input type="email" placeholder="E-mail" />
+                <input type="tel" placeholder="N° télephone " />
+                <input type="password" placeholder="mot de passe " />
+
+                <button type="submit" class="btn1">Créer mon compte</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -----------------------------Footer -------------------------------->
+    <footer class="main-footer">
+      <div class="section1">
+        <img src="img/logo1.png" width="200px" />
+        <p>
+          Sabrina Store est un magazin spécialisé dans la vente des accessoires
+          <br />
+          femme spécifiquement les bijoux, tournée entièrement vers la
+          satisfaction<br />
+          du client, par la présence de collaborateurs expérimentés et réputés.
+        </p>
+      </div>
+      <div class="section1">
+        <h2>Nos réseaux sociaux :</h2>
+        <br />
+        <ul>
+          <li>
+            <a href="#"> <i class="fa-brands fa-instagram"> </i> Instagram</a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-brands fa-square-facebook"> </i> Facebook</a
+            >
+          </li>
+          <li>
+            <a href="#"> <i class="fa-brands fa-tiktok"></i> Tik Tok </a>
+          </li>
+          <li>
+            <a href="#"> <i class="fa-brands fa-square-twitter"></i> Twitter</a>
+          </li>
+        </ul>
+      </div>
+      <div class="section1">
+        <h2>Contacter nous :</h2>
+        <br />
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i>Kouba, Alger, Algerie</li>
+          <li><i class="fa-solid fa-square-phone"></i>(+213) 23 00 34 97</li>
+          <li>
+            <i class="fa-regular fa-envelope"></i>
+            contact@sabrina-store-algerie.com
+          </li>
+          <li><i class="fa-regular fa-clock"></i>Dim - Jeu 08:30 - 17:00</li>
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      var LoginForm = document.getElementById("LoginForm");
+      var RegForm = document.getElementById("RegForm");
+      var indicator = document.getElementById("indicator");
+
+      function compte() {
+        RegForm.style.transform = "translateX(0px)";
+        LoginForm.style.transform = "translateX(0px)";
+        indicator.style.transform = "translateX(100px)";
+      }
+
+      function connexion() {
+        RegForm.style.transform = "translateX(300px)";
+        LoginForm.style.transform = "translateX(300px)";
+        indicator.style.transform = "translateX(0px)";
+      }
+    </script>
+  </body>
+</html>
