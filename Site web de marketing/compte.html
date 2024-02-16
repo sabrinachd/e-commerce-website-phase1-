@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Compte -sabrina store</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -39,7 +39,9 @@
             >
           </li>
           <li>
-            <a href="#"> <i class="fa-regular fa-calendar"></i> Contact</a>
+            <a href="contact.html">
+              <i class="fa-regular fa-calendar"></i> Contact</a
+            >
           </li>
           <li>
             <a href="compte.html"
@@ -61,21 +63,49 @@
               <div class="form-btn">
                 <span onclick="connexion()">Connexion </span>
                 <span onclick="compte ()"> Créer Compte </span>
-                <hr id="indicator" />
               </div>
-              <form action="" id="LoginForm">
-                <input type="text" placeholder="Nom et prénom" />
-                <input type="password" placeholder="mot de passe " />
+
+              <form
+                action=""
+                id="LoginForm"
+                name="loginForm"
+                onsubmit="return validateForm(event) "
+              >
+                <input type="text" name="name" placeholder="Nom et prénom" />
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="mot de passe "
+                />
 
                 <button type="submit" class="btn1">Se connecter</button> <br />
+                <div id="modal" class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="fermerModal()">&times;</span>
+                    <p>Félicitations! Vous êtes connecté avec succès.</p>
+                  </div>
+                </div>
                 <br />
                 <a href="">mot de passe oublié </a>
               </form>
-              <form action="" id="RegForm">
-                <input type="text" placeholder="Nom et prénom " />
-                <input type="email" placeholder="E-mail" />
-                <input type="tel" placeholder="N° télephone " />
-                <input type="password" placeholder="mot de passe " />
+              <form
+                action=""
+                id="RegForm"
+                name="loginForm2"
+                onsubmit="return validateForm2(event) "
+              >
+                <input type="text" name="name" placeholder="Nom et prénom " />
+                <input type="email" name="email" placeholder="E-mail" />
+                <input
+                  type="tel"
+                  name="telephone"
+                  placeholder="N° télephone "
+                />
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="mot de passe "
+                />
 
                 <button type="submit" class="btn1">Créer mon compte</button>
               </form>
@@ -148,6 +178,9 @@
         LoginForm.style.transform = "translateX(300px)";
         indicator.style.transform = "translateX(0px)";
       }
+    </script>
+    <script src="/js/script.js">
+      async
     </script>
   </body>
 </html>
